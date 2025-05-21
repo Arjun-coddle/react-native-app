@@ -1,8 +1,34 @@
-import React from "react";
-import { Text, View, TouchableOpacity, TextInput } from "react-native";
+import React, { useState } from "react";
+import { Text, View, TouchableOpacity, TextInput, Alert } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "../styles/auth";
 
 const SignUp = ({ navigation }) => {
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>(null);
+
+  const handleSubmit = async () => {
+    if (!name || !email || !password) {
+      Alert.alert("Error", "Please fill all fields.");
+      return;
+    }
+
+    try {
+      const userData = {
+        name,
+        email,
+        password,
+      };
+      await AsyncStorage.setItem("user", JSON.stringify(userData));
+      Alert.alert("Success", "Account created!");
+      navigation.navigate("Login");
+    } catch (e) {
+      Alert.alert("Error", "Failed to save user data.");
+      console.error("AsyncStorage error:", e);
+    }
+  };
+
   return (
     <View style={styles.main}>
       <View style={styles.container}>
@@ -19,6 +45,8 @@ const SignUp = ({ navigation }) => {
             style={styles.input}
             placeholder="Enter your name"
             autoCapitalize="words"
+            value={name}
+            onChangeText={setName}
           />
 
           <Text style={styles.label}>Email:</Text>
@@ -27,6 +55,8 @@ const SignUp = ({ navigation }) => {
             placeholder="Enter your email"
             keyboardType="email-address"
             autoCapitalize="none"
+            value={email}
+            onChangeText={setEmail}
           />
 
           <Text style={styles.label}>Password:</Text>
@@ -34,6 +64,8 @@ const SignUp = ({ navigation }) => {
             style={styles.input}
             placeholder="Enter password"
             secureTextEntry={true}
+            value={password}
+            onChangeText={setPassword}
           />
 
           <View style={styles.signinLink}>
@@ -48,7 +80,7 @@ const SignUp = ({ navigation }) => {
             </Text>
           </View>
 
-          <TouchableOpacity style={styles.submitBtn}>
+          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
             <Text style={styles.submitBtnText}>Submit</Text>
           </TouchableOpacity>
         </View>

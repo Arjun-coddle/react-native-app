@@ -5,7 +5,7 @@ import UserIcon from "../assets/User";
 import NotificationIcon from "../assets/NotificationIcon";
 import Sidebar from "./Sidebar";
 
-const Header = ({ navigation }) => {
+const Header = ({ navigation, username }) => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
@@ -19,7 +19,7 @@ const Header = ({ navigation }) => {
           <UserIcon />
         </TouchableOpacity>
 
-        <Text style={Nav.whitetext}>This is header</Text>
+        <Text style={Nav.whitetext}>{username}</Text>
 
         <TouchableOpacity
           style={Nav.notificationIcon}

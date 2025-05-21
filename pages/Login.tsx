@@ -1,16 +1,40 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "../styles/auth";
 
+type StoredUser = {
+  name: string;
+  email: string;
+  password: string;
+};
+
 const Login = ({ navigation }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [user, setUser] = useState<StoredUser | null>(null);
+
+  useEffect(() => {
+    const getUserData = async () => {
+      try {
+        const jsonValue = await AsyncStorage.getItem("user");
+        const storedUser: StoredUser | null = jsonValue
+          ? JSON.parse(jsonValue)
+          : null;
+        setUser(storedUser);
+      } catch (e) {
+        console.error("Failed to load user data:", e);
+      }
+    };
+
+    getUserData();
+  }, []);
 
   const handleLogin = () => {
-    if (email === "user@gmail.com" && password === "123") {
+    if (user && email === user.email && password === user.password) {
       setError("");
-      navigation.navigate("home");
+      navigation.navigate("home", { username: user?.name });
     } else {
       setError("Invalid credentials. Try again.");
     }
