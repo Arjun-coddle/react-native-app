@@ -6,15 +6,16 @@ import NetworkIcon from "../assets/NetworkIcon";
 import StatusIcon from "../assets/StatusIcon";
 import SettingsIcon from "../assets/SettingsIcon";
 import PremiumIcon from "../assets/PremiumIcon";
+import LogoutIcon from "../assets/LogoutIcon";
 
-const Sidebar = ({ navigation }) => {
+const Sidebar = ({ navigation, username }) => {
   return (
     <View style={Style.container}>
       <View style={Style.list}>
         <TouchableOpacity
           style={Style.listContainer}
           onPress={() => {
-            navigation.navigate("profile");
+            navigation.navigate("profile", { username });
           }}
         >
           <ProfileIcon />
@@ -41,6 +42,15 @@ const Sidebar = ({ navigation }) => {
           <SettingsIcon />
           <Text style={{ color: "white" }}>Settings</Text>
         </View>
+        <TouchableOpacity
+          style={Style.listContainer}
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        >
+          <LogoutIcon />
+          <Text style={{ color: "red" }}>Log out</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

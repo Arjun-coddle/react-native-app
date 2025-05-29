@@ -1,0 +1,97 @@
+import { StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#0a0a0a",
+  },
+  imageContainer: {
+    position: "relative",
+    height: 280,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+  },
+  imageOverlay: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: 100,
+  },
+  contentContainer: {
+    flex: 1,
+    backgroundColor: "#0a0a0a",
+    marginTop: -20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    paddingHorizontal: 20,
+    paddingTop: 24,
+    paddingBottom: 40,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#ffffff",
+    textAlign: "center",
+    marginBottom: 8,
+  },
+  divider: {
+    height: 2,
+    backgroundColor: "#ff6b35",
+    width: 60,
+    alignSelf: "center",
+    marginBottom: 32,
+    borderRadius: 1,
+  },
+  stepsContainer: {
+    marginTop: 8,
+  },
+  subTitle: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#ff6b35",
+    marginBottom: 20,
+    textAlign: "center",
+  },
+  stepCard: {
+    flexDirection: "row",
+    backgroundColor: "#1a1a1a",
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: "#ff6b35",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  stepNumber: {
+    backgroundColor: "#ff6b35",
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 16,
+    flexShrink: 0,
+  },
+  stepNumberText: {
+    color: "#ffffff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  stepText: {
+    fontSize: 16,
+    color: "#e0e0e0",
+    lineHeight: 24,
+    flex: 1,
+  },
+});

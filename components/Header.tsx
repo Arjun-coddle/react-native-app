@@ -31,7 +31,7 @@ const Header = ({ navigation, username }) => {
         </TouchableOpacity>
       </View>
 
-      {showSidebar && <Sidebar navigation={navigation} />}
+      {showSidebar && <Sidebar navigation={navigation} username={username} />}
     </View>
   );
 };

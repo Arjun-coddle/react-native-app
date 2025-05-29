@@ -6,7 +6,7 @@ import styles from "../styles/auth";
 const SignUp = ({ navigation }) => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>(null);
+  const [password, setPassword] = useState<string>(""); // Fixed null initial state
 
   const handleSubmit = async () => {
     if (!name || !email || !password) {
@@ -33,43 +33,46 @@ const SignUp = ({ navigation }) => {
     <View style={styles.main}>
       <View style={styles.container}>
         <View style={styles.head}>
-          <Text style={styles.title}>Create your account</Text>
+          <Text style={styles.title}>Create Your Account</Text>
           <Text style={styles.subtitle}>It's quick and easy</Text>
         </View>
 
         <View style={styles.hr} />
 
         <View style={styles.formContainer}>
-          <Text style={styles.label}>Name:</Text>
+          <Text style={styles.label}>Name</Text>
           <TextInput
             style={styles.input}
             placeholder="Enter your name"
+            placeholderTextColor="#B0B0B0"
             autoCapitalize="words"
             value={name}
             onChangeText={setName}
           />
 
-          <Text style={styles.label}>Email:</Text>
+          <Text style={styles.label}>Email</Text>
           <TextInput
             style={styles.input}
             placeholder="Enter your email"
+            placeholderTextColor="#B0B0B0"
             keyboardType="email-address"
             autoCapitalize="none"
             value={email}
             onChangeText={setEmail}
           />
 
-          <Text style={styles.label}>Password:</Text>
+          <Text style={styles.label}>Password</Text>
           <TextInput
             style={styles.input}
             placeholder="Enter password"
+            placeholderTextColor="#B0B0B0"
             secureTextEntry={true}
             value={password}
             onChangeText={setPassword}
           />
 
           <View style={styles.signinLink}>
-            <Text>
+            <Text style={styles.subtitle}>
               Already have an account?{" "}
               <Text
                 style={styles.signinLinkText}
@@ -81,7 +84,7 @@ const SignUp = ({ navigation }) => {
           </View>
 
           <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
-            <Text style={styles.submitBtnText}>Submit</Text>
+            <Text style={styles.submitBtnText}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>

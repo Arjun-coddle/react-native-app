@@ -1,0 +1,80 @@
+[
+  {
+    "id": 11,
+    "name": "Watermelon",
+    "img": "https://images.news18.com/webstories/uploads/2025/04/24-2025-04-09f50c99a24070f507519ee4b1ceade7.jpg",
+    "foods": [
+      {
+        "id": 101,
+        "name": "Watermelon Juice",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU8sZfweTdWOkRAiSjLCfp_0jr2DlWfA4akg&s",
+        "steps": [
+          "Cut watermelon into small pieces",
+          "Blend the pieces until smooth",
+          "Strain the juice and serve chilled"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Breakfast",
+    "img": "https://thumbs.dreamstime.com/b/breakfast-bacon-eggs-pancakes-toast-delicous-home-style-crispy-coffee-orange-juice-49174170.jpg",
+    "foods": [
+      {
+        "id": 102,
+        "name": "Masala Dosa",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUxO51dhQgU4E69eIY40mfQDMowr6EyffU0Q&s",
+        "steps": [
+          "Make dosa batter and ferment overnight",
+          "Cook dosa on hot tawa",
+          "Fill with potato masala and serve"
+        ]
+      },
+      {
+        "id": 103,
+        "name": "Idli with Sambar",
+        "img": "https://media.istockphoto.com/id/1306083224/photo/idly-or-idli.jpg?s=612x612&w=0&k=20&c=cVpLEs4L3je0_zEFQ38BeZRjBLYQ1YGr9oTIdjhAbTY=",
+        "steps": [
+          "Steam idlis from batter",
+          "Cook sambar using vegetables and dal",
+          "Serve hot idli with sambar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Snacks",
+    "img": "https://www.shutterstock.com/image-photo/selective-focus-samosa-spiced-potatofilled-260nw-2450430319.jpg",
+    "foods": [
+      {
+        "id": 104,
+        "name": "Samosa",
+        "img": "https://www.shutterstock.com/image-photo/selective-focus-samosa-spiced-potatofilled-260nw-2450430319.jpg",
+        "steps": [
+          "Prepare dough and potato filling",
+          "Stuff the dough with filling",
+          "Deep fry until golden"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Rice",
+    "img": "https://static01.nyt.com/images/2018/02/21/dining/00RICEGUIDE8/00RICEGUIDE8-superJumbo.jpg",
+    "foods": [
+      {
+        "id": 105,
+        "name": "Veg Biryani",
+        "img": "https://j6e2i8c9.delivery.rocketcdn.me/wp-content/uploads/2019/01/Shahi-Veg-Biryani-Recipe-01.jpg",
+        "steps": [
+          "Cook basmati rice with whole spices",
+          "Prepare mixed vegetable masala",
+          "Layer and dum cook"
+        ]
+      }
+    ]
+  }
+]
