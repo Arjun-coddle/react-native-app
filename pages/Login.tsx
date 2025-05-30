@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  ImageBackground,
+} from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import styles from "../styles/auth";
 
@@ -45,55 +51,63 @@ const Login = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.main}>
-      <View style={styles.container}>
-        <View style={styles.loginHead}>
-          <Text style={styles.title}>Welcome to Cook Master</Text>
-          <Text style={styles.subtitle}>Please enter your details</Text>
-        </View>
-
-        <View style={styles.formContainer}>
-          <Text style={styles.label}>Email</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter your email"
-            placeholderTextColor="#B0B0B0" // Light gray placeholder
-            keyboardType="email-address"
-            autoCapitalize="none"
-            value={email}
-            onChangeText={setEmail}
-          />
-
-          <Text style={styles.label}>Password</Text>
-          <TextInput
-            style={styles.input}
-            placeholder="Enter password"
-            placeholderTextColor="#B0B0B0"
-            secureTextEntry
-            value={password}
-            onChangeText={setPassword}
-          />
-
-          {error ? <Text style={styles.error}>{error}</Text> : null}
-
-          <View style={styles.signinLink}>
-            <Text style={styles.subtitle}>
-              Don't have an account?{" "}
-              <Text
-                style={styles.signinLinkText}
-                onPress={() => navigation.navigate("SignUp")}
-              >
-                Sign up
-              </Text>
-            </Text>
+    <ImageBackground
+      source={{
+        uri: "https://i.pinimg.com/736x/af/b7/22/afb7224738fdc84bd07e61e7ebc6e1a0.jpg",
+      }}
+      style={styles.image}
+      resizeMode="cover"
+    >
+      <View style={styles.main}>
+        <View style={styles.container}>
+          <View style={styles.loginHead}>
+            <Text style={styles.title}>Welcome to Cook Master</Text>
+            <Text style={styles.subtitle}>Please enter your details</Text>
           </View>
 
-          <TouchableOpacity style={styles.submitBtn} onPress={handleLogin}>
-            <Text style={styles.submitBtnText}>Sign In</Text>
-          </TouchableOpacity>
+          <View style={styles.formContainer}>
+            <Text style={styles.label}>Email</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter your email"
+              placeholderTextColor="#B0B0B0" // Light gray placeholder
+              keyboardType="email-address"
+              autoCapitalize="none"
+              value={email}
+              onChangeText={setEmail}
+            />
+
+            <Text style={styles.label}>Password</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Enter password"
+              placeholderTextColor="#B0B0B0"
+              secureTextEntry
+              value={password}
+              onChangeText={setPassword}
+            />
+
+            {error ? <Text style={styles.error}>{error}</Text> : null}
+
+            <View style={styles.signinLink}>
+              <Text style={styles.subtitle}>
+                Don't have an account?{" "}
+                <Text
+                  style={styles.signinLinkText}
+                  onPress={() => navigation.navigate("SignUp")}
+                >
+                  Sign up
+                </Text>
+              </Text>
+            </View>
+
+            <TouchableOpacity style={styles.submitBtn} onPress={handleLogin}>
+              <Text style={styles.submitBtnText}>Sign In</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </ImageBackground>
   );
 };
 

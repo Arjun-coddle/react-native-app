@@ -5,7 +5,12 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     paddingHorizontal: 20,
-    backgroundColor: "black",
+    // backgroundColor: "black",
+  },
+  image: {
+    flex: 1,
+    justifyContent: "center",
+    // paddingHorizontal: 20,
   },
   container: {
     backgroundColor: "#2e2c28",
@@ -16,7 +21,7 @@ export default StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 4,
-    elevation: 5,
+    opacity: 0.9,
   },
   loginHead: {
     alignItems: "center",
