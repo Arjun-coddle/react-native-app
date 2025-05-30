@@ -39,7 +39,7 @@ const SignUp = ({ navigation }) => {
   return (
     <ImageBackground
       source={{
-        uri: "https://i.pinimg.com/736x/af/b7/22/afb7224738fdc84bd07e61e7ebc6e1a0.jpg",
+        uri: "https://i.pinimg.com/736x/01/c8/5f/01c85f5b375f16638e1fc9b12e94338f.jpg",
       }}
       style={styles.image}
       resizeMode="cover"
