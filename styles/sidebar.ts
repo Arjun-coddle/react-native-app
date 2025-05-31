@@ -8,7 +8,7 @@ export default StyleSheet.create({
     paddingVertical: 35,
     backgroundColor: "black",
     position: "absolute",
-    top: 55,
+    top: 100,
     left: 0,
     zIndex: 4,
   },

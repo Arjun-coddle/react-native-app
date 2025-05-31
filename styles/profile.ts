@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "black",
     paddingHorizontal: 15,
+    paddingTop: 40,
   },
   whiteText: {
     color: "white",

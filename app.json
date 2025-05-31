@@ -21,11 +21,20 @@
         "backgroundColor": "#ffffff"
       },
       "android": {
-        "permissions": ["INTERNET"]
-      }
+        "permissions": [
+          "INTERNET"
+        ]
+      },
+      "package": "com.thebluebird.DoneWithIt"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b01b4dff-b1f4-4a36-ab37-5bb13ec88e4b"
+      }
+    },
+    "owner": "arjunkallingal"
   }
 }

@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "black",
-    paddingTop: 150,
+    paddingTop: 170,
     alignItems: "center",
     position: "relative",
   },
@@ -25,7 +25,7 @@ export default StyleSheet.create({
     position: "absolute",
     flexDirection: "row",
     alignItems: "center",
-    top: 50,
+    top: 70,
     left: 0,
     gap: 30,
   },

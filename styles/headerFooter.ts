@@ -5,7 +5,7 @@ export default StyleSheet.create({
     width: "100%",
     alignItems: "center",
     backgroundColor: "black",
-    // paddingTop: 20,
+    paddingTop: 40,
   },
   nav: {
     width: "100%",

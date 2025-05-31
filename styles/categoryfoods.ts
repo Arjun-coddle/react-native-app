@@ -4,7 +4,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 10,
-    paddingTop: 30,
+    paddingTop: 60,
     backgroundColor: "black",
   },
   card: {
